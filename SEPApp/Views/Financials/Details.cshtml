@@ -1,0 +1,42 @@
+﻿@model SEPApp.Models.Financial
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Financial</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EventId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpectedBudgetIncrease)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpectedBudgetIncrease)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Justification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Justification)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RequestId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

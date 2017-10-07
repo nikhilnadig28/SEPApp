@@ -29,5 +29,13 @@ namespace SEPApp.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<SEPApp.Models.Event> Events { get; set; }
+
+        public System.Data.Entity.DbSet<SEPApp.Models.TaskList> TaskLists { get; set; }
+
+        public System.Data.Entity.DbSet<SEPApp.Models.Financial> Financials { get; set; }
+
+        public System.Data.Entity.DbSet<SEPApp.Models.Recruitment> Recruitments { get; set; }
     }
 }

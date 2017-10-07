@@ -217,16 +217,40 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="Controllers\FinancialsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RecruitmentsController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\TaskListsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710071442161_InitialCreate.cs" />
+    <Compile Include="Migrations\201710071442161_InitialCreate.Designer.cs">
+      <DependentUpon>201710071442161_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710071915294_event.cs" />
+    <Compile Include="Migrations\201710071915294_event.Designer.cs">
+      <DependentUpon>201710071915294_event.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710071924502_tasklist.cs" />
+    <Compile Include="Migrations\201710071924502_tasklist.Designer.cs">
+      <DependentUpon>201710071924502_tasklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710071934552_financeRecruitment.cs" />
+    <Compile Include="Migrations\201710071934552_financeRecruitment.Designer.cs">
+      <DependentUpon>201710071934552_financeRecruitment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\Financial.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Recruitment.cs" />
+    <Compile Include="Models\TaskList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -289,6 +313,26 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Role\Index.cshtml" />
     <Content Include="Views\Role\Create.cshtml" />
+    <Content Include="Views\Events\Create.cshtml" />
+    <Content Include="Views\Events\Delete.cshtml" />
+    <Content Include="Views\Events\Details.cshtml" />
+    <Content Include="Views\Events\Edit.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
+    <Content Include="Views\TaskLists\Create.cshtml" />
+    <Content Include="Views\TaskLists\Delete.cshtml" />
+    <Content Include="Views\TaskLists\Details.cshtml" />
+    <Content Include="Views\TaskLists\Edit.cshtml" />
+    <Content Include="Views\TaskLists\Index.cshtml" />
+    <Content Include="Views\Financials\Create.cshtml" />
+    <Content Include="Views\Financials\Delete.cshtml" />
+    <Content Include="Views\Financials\Details.cshtml" />
+    <Content Include="Views\Financials\Edit.cshtml" />
+    <Content Include="Views\Financials\Index.cshtml" />
+    <Content Include="Views\Recruitments\Create.cshtml" />
+    <Content Include="Views\Recruitments\Delete.cshtml" />
+    <Content Include="Views\Recruitments\Details.cshtml" />
+    <Content Include="Views\Recruitments\Edit.cshtml" />
+    <Content Include="Views\Recruitments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -305,6 +349,20 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710071442161_InitialCreate.resx">
+      <DependentUpon>201710071442161_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710071915294_event.resx">
+      <DependentUpon>201710071915294_event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710071924502_tasklist.resx">
+      <DependentUpon>201710071924502_tasklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710071934552_financeRecruitment.resx">
+      <DependentUpon>201710071934552_financeRecruitment.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
