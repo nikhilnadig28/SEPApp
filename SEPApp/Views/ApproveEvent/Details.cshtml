@@ -1,0 +1,98 @@
+﻿@model SEPApp.Models.Event
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Event</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EventName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EventType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FromDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preferences)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preferences)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Budget)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Budget)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeniorCustomerApprove)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeniorCustomerApprove)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdministrativeManagerApprove)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdministrativeManagerApprove)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancialManagerComments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinancialManagerComments)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EventId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

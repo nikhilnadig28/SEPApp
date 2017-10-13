@@ -163,7 +163,7 @@ namespace SEPApp.Controllers
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
                     //Assign Role to user Here   
-                    await this.UserManager.AddToRoleAsync(user.Id,model.UserRoles);
+                    //await this.UserManager.AddToRoleAsync(user.Id,model.UserRoles);
                     //Ends Here  
 
 

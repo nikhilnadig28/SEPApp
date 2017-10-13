@@ -218,9 +218,11 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="Controllers\FeedbackController.cs" />
     <Compile Include="Controllers\FinancialsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ManageEventController.cs" />
     <Compile Include="Controllers\RecruitmentsController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\TaskListsController.cs" />
@@ -243,6 +245,11 @@
     <Compile Include="Migrations\201710071934552_financeRecruitment.Designer.cs">
       <DependentUpon>201710071934552_financeRecruitment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710131536284_EventUpdate.cs" />
+    <Compile Include="Migrations\201710131536284_EventUpdate.Designer.cs">
+      <DependentUpon>201710131536284_EventUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApproveEventController.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Event.cs" />
@@ -333,6 +340,21 @@
     <Content Include="Views\Recruitments\Details.cshtml" />
     <Content Include="Views\Recruitments\Edit.cshtml" />
     <Content Include="Views\Recruitments\Index.cshtml" />
+    <Content Include="Views\Role\Edit.cshtml" />
+    <Content Include="Views\Role\ManageUserRoles.cshtml" />
+    <Content Include="Views\Role\GetRoles.cshtml" />
+    <Content Include="Views\Role\RoleAddToUser.cshtml" />
+    <Content Include="Views\ManageEvent\Create.cshtml" />
+    <Content Include="Views\ManageEvent\Delete.cshtml" />
+    <Content Include="Views\ManageEvent\Details.cshtml" />
+    <Content Include="Views\ManageEvent\Edit.cshtml" />
+    <Content Include="Views\ManageEvent\Index.cshtml" />
+    <Content Include="Views\ApproveEvent\Index.cshtml" />
+    <Content Include="Views\ApproveEvent\Edit.cshtml" />
+    <Content Include="Views\ApproveEvent\Details.cshtml" />
+    <Content Include="Views\Feedback\Details.cshtml" />
+    <Content Include="Views\Feedback\Edit.cshtml" />
+    <Content Include="Views\Feedback\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -362,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710071934552_financeRecruitment.resx">
       <DependentUpon>201710071934552_financeRecruitment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710131536284_EventUpdate.resx">
+      <DependentUpon>201710131536284_EventUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

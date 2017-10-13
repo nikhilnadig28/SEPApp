@@ -8,20 +8,20 @@ using System.Web;
 using System.Web.Mvc;
 using SEPApp.Models;
 
-namespace SEPApp.Controllers
+namespace SEPApp.Migrations
 {
-    [Authorize(Roles = "CustomerCare, SeniorCustomerCare")]
-    public class EventsController : Controller
+    [Authorize(Roles = "AdminManager")]
+    public class ApproveEventController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Events
+        // GET: ApproveEvent
         public ActionResult Index()
         {
             return View(db.Events.ToList());
         }
 
-        // GET: Events/Details/5
+        // GET: ApproveEvent/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,30 +36,30 @@ namespace SEPApp.Controllers
             return View(@event);
         }
 
-        // GET: Events/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
+        // GET: ApproveEvent/Create
+        //public ActionResult Create()
+        //{
+        //    return View();
+        //}
 
-        // POST: Events/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventId,EventName,EventType,ClientId,FromDate,ToDate,Preferences,Budget")] Event @event)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Events.Add(@event);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+        //// POST: ApproveEvent/Create
+        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Create([Bind(Include = "EventId,EventName,EventType,ClientId,FromDate,ToDate,Preferences,Budget,SeniorCustomerApprove,AdministrativeManagerApprove,FinancialManagerComments")] Event @event)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Events.Add(@event);
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
 
-            return View(@event);
-        }
+        //    return View(@event);
+        //}
 
-        // GET: Events/Edit/5
+        // GET: ApproveEvent/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -74,12 +74,12 @@ namespace SEPApp.Controllers
             return View(@event);
         }
 
-        // POST: Events/Edit/5
+        // POST: ApproveEvent/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EventId,EventName,EventType,ClientId,FromDate,ToDate,Preferences,Budget")] Event @event)
+        public ActionResult Edit([Bind(Include = "EventId,EventName,EventType,ClientId,FromDate,ToDate,Preferences,Budget,SeniorCustomerApprove,AdministrativeManagerApprove,FinancialManagerComments")] Event @event)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace SEPApp.Controllers
             return View(@event);
         }
 
-        // GET: Events/Delete/5
+        // GET: ApproveEvent/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -105,7 +105,7 @@ namespace SEPApp.Controllers
             return View(@event);
         }
 
-        // POST: Events/Delete/5
+        // POST: ApproveEvent/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

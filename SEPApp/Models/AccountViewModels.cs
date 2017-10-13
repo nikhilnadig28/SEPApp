@@ -49,8 +49,7 @@ namespace SEPApp.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
+        [Display(Name = "User Name")]
         public string Email { get; set; }
 
         [Required]
@@ -80,7 +79,7 @@ namespace SEPApp.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
-        [Required]
+
         [Display(Name = "UserRoles")]
         public string UserRoles { get; set; }
 

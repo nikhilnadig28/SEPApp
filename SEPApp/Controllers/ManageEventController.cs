@@ -10,18 +10,18 @@ using SEPApp.Models;
 
 namespace SEPApp.Controllers
 {
-    [Authorize(Roles = "CustomerCare, SeniorCustomerCare")]
-    public class EventsController : Controller
+    [Authorize(Roles = "SeniorCustomerCare")]
+    public class ManageEventController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Events
+        // GET: ManageEvent
         public ActionResult Index()
         {
-            return View(db.Events.ToList());
+            return View(db.Events.Where(m => m.SeniorCustomerApprove == false).ToList());
         }
 
-        // GET: Events/Details/5
+        // GET: ManageEvent/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,18 +36,18 @@ namespace SEPApp.Controllers
             return View(@event);
         }
 
-        // GET: Events/Create
+        // GET: ManageEvent/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Events/Create
+        // POST: ManageEvent/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventId,EventName,EventType,ClientId,FromDate,ToDate,Preferences,Budget")] Event @event)
+        public ActionResult Create([Bind(Include = "EventId,EventName,EventType,ClientId,FromDate,ToDate,Preferences,Budget,SeniorCustomerApprove,AdministrativeManagerApprove,FinancialManagerComments")] Event @event)
         {
             if (ModelState.IsValid)
             {
@@ -59,7 +59,7 @@ namespace SEPApp.Controllers
             return View(@event);
         }
 
-        // GET: Events/Edit/5
+        // GET: ManageEvent/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -74,12 +74,12 @@ namespace SEPApp.Controllers
             return View(@event);
         }
 
-        // POST: Events/Edit/5
+        // POST: ManageEvent/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EventId,EventName,EventType,ClientId,FromDate,ToDate,Preferences,Budget")] Event @event)
+        public ActionResult Edit([Bind(Include = "EventId,EventName,EventType,ClientId,FromDate,ToDate,Preferences,Budget,SeniorCustomerApprove,AdministrativeManagerApprove,FinancialManagerComments")] Event @event)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace SEPApp.Controllers
             return View(@event);
         }
 
-        // GET: Events/Delete/5
+        // GET: ManageEvent/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -105,7 +105,7 @@ namespace SEPApp.Controllers
             return View(@event);
         }
 
-        // POST: Events/Delete/5
+        // POST: ManageEvent/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
