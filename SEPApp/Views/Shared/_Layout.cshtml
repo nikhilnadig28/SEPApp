@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - SEP Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -17,14 +17,45 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("SEP", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                   
+                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Manage Role", "Index", "Role")</li>   
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                    @if (User.IsInRole("CustomerCare") || User.IsInRole("SeniorCustomerCare"))
+                    {
+                        <li>@Html.ActionLink("Event", "Index", "Events")</li>
+                    }
+                    @if (User.IsInRole("FinancialManager"))
+                    {
+                        <li>@Html.ActionLink("Feedback", "Index", "Feedback")</li>
+                    }
+                    @if (User.IsInRole("SeniorCustomerCare"))
+                    {
+                        <li>@Html.ActionLink("Manage Event", "Index", "ManageEvent")</li>
+                    }
+                    @if (User.IsInRole("ProductionManager") || User.IsInRole("ServiceManager"))
+                    {
+                        <li>@Html.ActionLink("Events", "Index", "ManagerView")</li>
+                        <li>@Html.ActionLink("Task", "Index", "TaskList")</li>
+                        <li>@Html.ActionLink("Request Resources", "Index", "Recruitments")</li>
+                    }
+                    @if (User.IsInRole("HRManager"))
+                    {
+                        <li>@Html.ActionLink("Resources Needed", "Index", "HRManagerView")</li>
+                        <li>@Html.ActionLink("Hiring Tracker", "Index", "HiringTrackers")</li>
+                    }
+                    @if (User.IsInRole("HRTeam"))
+                    {
+                        
+                      <li>@Html.ActionLink("Hiring Tracker", "Index", "TeamHiringTrackers")</li>
+                    }
+
+
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -34,7 +65,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - SEP Application</p>
         </footer>
     </div>
 

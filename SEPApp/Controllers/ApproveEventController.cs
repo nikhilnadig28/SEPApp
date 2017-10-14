@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using SEPApp.Models;
 
-namespace SEPApp.Migrations
+namespace SEPApp.Controllers
 {
     [Authorize(Roles = "AdminManager")]
     public class ApproveEventController : Controller

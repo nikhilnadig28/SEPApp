@@ -220,13 +220,16 @@
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\FeedbackController.cs" />
     <Compile Include="Controllers\FinancialsController.cs" />
+    <Compile Include="Controllers\HiringTrackersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HRManagerViewController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ManageEventController.cs" />
     <Compile Include="Controllers\ManagerViewController.cs" />
     <Compile Include="Controllers\RecruitmentsController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\TaskListsController.cs" />
+    <Compile Include="Controllers\TeamHiringTrackersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -250,15 +253,25 @@
     <Compile Include="Migrations\201710131536284_EventUpdate.Designer.cs">
       <DependentUpon>201710131536284_EventUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\ApproveEventController.cs" />
+    <Compile Include="Controllers\ApproveEventController.cs" />
+    <Compile Include="Migrations\201710140940196_no.cs" />
+    <Compile Include="Migrations\201710140940196_no.Designer.cs">
+      <DependentUpon>201710140940196_no.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710141017021_hiringtracker.cs" />
+    <Compile Include="Migrations\201710141017021_hiringtracker.Designer.cs">
+      <DependentUpon>201710141017021_hiringtracker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Financial.cs" />
+    <Compile Include="Models\HiringTracker.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Recruitment.cs" />
     <Compile Include="Models\TaskList.cs" />
+    <Compile Include="Models\Teammember.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -357,6 +370,16 @@
     <Content Include="Views\Feedback\Edit.cshtml" />
     <Content Include="Views\Feedback\Index.cshtml" />
     <Content Include="Views\ManagerView\Index.cshtml" />
+    <Content Include="Views\HRManagerView\Details.cshtml" />
+    <Content Include="Views\HRManagerView\Index.cshtml" />
+    <Content Include="Views\HiringTrackers\Create.cshtml" />
+    <Content Include="Views\HiringTrackers\Delete.cshtml" />
+    <Content Include="Views\HiringTrackers\Details.cshtml" />
+    <Content Include="Views\HiringTrackers\Edit.cshtml" />
+    <Content Include="Views\HiringTrackers\Index.cshtml" />
+    <Content Include="Views\TeamHiringTrackers\Details.cshtml" />
+    <Content Include="Views\TeamHiringTrackers\Edit.cshtml" />
+    <Content Include="Views\TeamHiringTrackers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -389,6 +412,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710131536284_EventUpdate.resx">
       <DependentUpon>201710131536284_EventUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710140940196_no.resx">
+      <DependentUpon>201710140940196_no.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710141017021_hiringtracker.resx">
+      <DependentUpon>201710141017021_hiringtracker.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

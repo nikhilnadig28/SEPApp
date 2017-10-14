@@ -37,5 +37,7 @@ namespace SEPApp.Models
         public System.Data.Entity.DbSet<SEPApp.Models.Financial> Financials { get; set; }
 
         public System.Data.Entity.DbSet<SEPApp.Models.Recruitment> Recruitments { get; set; }
+
+        public System.Data.Entity.DbSet<SEPApp.Models.HiringTracker> HiringTrackers { get; set; }
     }
 }

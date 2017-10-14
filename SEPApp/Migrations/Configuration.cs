@@ -81,6 +81,22 @@ namespace SEPApp.Migrations
                 }
 
             }
+
+            List<string> employeeList = new List<string> { "teammember1" , "teammember2", "teammember3", "teammember4" };
+
+            foreach (var item in employeeList)
+            {
+                if (!context.Users.Any(u => u.UserName == item))
+                {
+                    var store = new UserStore<ApplicationUser>(context);
+                    var manager = new UserManager<ApplicationUser>(store);
+                    var user = new ApplicationUser { UserName = item };
+
+                    manager.Create(user, item);
+                    manager.AddToRole(user.Id, "TeamMember");
+                }
+            }
+            
             //string[] userNames = { "customercare", "seniorcustomercare", "adminmanager", "financialmanager", "productionmanager", "servicemanager", "hrmanager", "hrteam1" };
            // var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
            // UserManager.AddToRoles("User ");
