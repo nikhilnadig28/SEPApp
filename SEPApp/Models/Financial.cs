@@ -6,6 +6,8 @@ using System.Web;
 
 namespace SEPApp.Models
 {
+    public enum Approve { Negotiating, Approved, Rejetced };
+
     public class Financial
     {
         [Key]
@@ -13,6 +15,7 @@ namespace SEPApp.Models
         public int EventId { get; set; }
         public int ExpectedBudgetIncrease { get; set; }
         public string Justification { get; set; }
+        public Approve Approval { get; set; }
 
     }
 }

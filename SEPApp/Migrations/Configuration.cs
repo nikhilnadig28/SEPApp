@@ -45,7 +45,7 @@ namespace SEPApp.Migrations
             //    );
 
             var RoleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
-            string[] roleNames = { "Admin", "ProductionManager", "HRManager", "HRTeam", "AdminManager", "FinancialManager", "SeniorCustomerCare", "CustomerCare", "TeamMember", "ServiceManager" };
+            string[] roleNames = { "Admin", "ProductionManager", "HRManager", "HRTeam", "AdminManager", "FinancialManager", "SeniorCustomerCare", "CustomerCare", "ServiceTeamMember", "ServiceManager", "ProductionTeamMember" };
             IdentityResult roleResult;
             foreach (var roleName in roleNames)
             {
@@ -64,7 +64,8 @@ namespace SEPApp.Migrations
                 { "servicemanager", "ServiceManager" },
                 { "hrmanager", "HRManager" },
                 { "hrteam1", "HRTeam" },
-                { "serviceteam1", "TeamMember" },
+                { "serviceteam1", "ServiceTeamMember" },
+                { "productionteam1", "ProductionTeamMember" },
 
             };
 
@@ -79,23 +80,22 @@ namespace SEPApp.Migrations
                     manager.Create(user, userRole.Item1);
                     manager.AddToRole(user.Id, userRole.Item2);
                 }
-
             }
 
-            List<string> employeeList = new List<string> { "teammember1" , "teammember2", "teammember3", "teammember4" };
+            //List<string> employeeList = new List<string> { "teammember1" , "teammember2", "teammember3", "teammember4" };
 
-            foreach (var item in employeeList)
-            {
-                if (!context.Users.Any(u => u.UserName == item))
-                {
-                    var store = new UserStore<ApplicationUser>(context);
-                    var manager = new UserManager<ApplicationUser>(store);
-                    var user = new ApplicationUser { UserName = item };
+            //foreach (var item in employeeList)
+            //{
+            //    if (!context.Users.Any(u => u.UserName == item))
+            //    {
+            //        var store = new UserStore<ApplicationUser>(context);
+            //        var manager = new UserManager<ApplicationUser>(store);
+            //        var user = new ApplicationUser { UserName = item };
 
-                    manager.Create(user, item);
-                    manager.AddToRole(user.Id, "TeamMember");
-                }
-            }
+            //        manager.Create(user, item);
+            //        manager.AddToRole(user.Id, "TeamMember");
+            //    }
+            //}
             
             //string[] userNames = { "customercare", "seniorcustomercare", "adminmanager", "financialmanager", "productionmanager", "servicemanager", "hrmanager", "hrteam1" };
            // var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));

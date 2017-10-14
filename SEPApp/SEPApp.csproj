@@ -219,6 +219,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\FeedbackController.cs" />
+    <Compile Include="Controllers\FinancialManagerController.cs" />
     <Compile Include="Controllers\FinancialsController.cs" />
     <Compile Include="Controllers\HiringTrackersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -226,8 +227,11 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ManageEventController.cs" />
     <Compile Include="Controllers\ManagerViewController.cs" />
+    <Compile Include="Controllers\ProductionTaskListController.cs" />
     <Compile Include="Controllers\RecruitmentsController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\ServiceTaskLists1Controller.cs" />
+    <Compile Include="Controllers\ServiceTaskListsController.cs" />
     <Compile Include="Controllers\TaskListsController.cs" />
     <Compile Include="Controllers\TeamHiringTrackersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -262,6 +266,22 @@
     <Compile Include="Migrations\201710141017021_hiringtracker.Designer.cs">
       <DependentUpon>201710141017021_hiringtracker.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710141049176_financialupdate.cs" />
+    <Compile Include="Migrations\201710141049176_financialupdate.Designer.cs">
+      <DependentUpon>201710141049176_financialupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710141433155_servicetasklist.cs" />
+    <Compile Include="Migrations\201710141433155_servicetasklist.Designer.cs">
+      <DependentUpon>201710141433155_servicetasklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710141454446_servicetasklist2.cs" />
+    <Compile Include="Migrations\201710141454446_servicetasklist2.Designer.cs">
+      <DependentUpon>201710141454446_servicetasklist2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710141511300_servicetasklist3.cs" />
+    <Compile Include="Migrations\201710141511300_servicetasklist3.Designer.cs">
+      <DependentUpon>201710141511300_servicetasklist3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Event.cs" />
@@ -270,6 +290,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Recruitment.cs" />
+    <Compile Include="Models\ServiceTaskList.cs" />
     <Compile Include="Models\TaskList.cs" />
     <Compile Include="Models\Teammember.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -344,11 +365,6 @@
     <Content Include="Views\TaskLists\Details.cshtml" />
     <Content Include="Views\TaskLists\Edit.cshtml" />
     <Content Include="Views\TaskLists\Index.cshtml" />
-    <Content Include="Views\Financials\Create.cshtml" />
-    <Content Include="Views\Financials\Delete.cshtml" />
-    <Content Include="Views\Financials\Details.cshtml" />
-    <Content Include="Views\Financials\Edit.cshtml" />
-    <Content Include="Views\Financials\Index.cshtml" />
     <Content Include="Views\Recruitments\Create.cshtml" />
     <Content Include="Views\Recruitments\Delete.cshtml" />
     <Content Include="Views\Recruitments\Details.cshtml" />
@@ -380,6 +396,27 @@
     <Content Include="Views\TeamHiringTrackers\Details.cshtml" />
     <Content Include="Views\TeamHiringTrackers\Edit.cshtml" />
     <Content Include="Views\TeamHiringTrackers\Index.cshtml" />
+    <Content Include="Views\Financials\Create.cshtml" />
+    <Content Include="Views\Financials\Delete.cshtml" />
+    <Content Include="Views\Financials\Details.cshtml" />
+    <Content Include="Views\Financials\Edit.cshtml" />
+    <Content Include="Views\Financials\Index.cshtml" />
+    <Content Include="Views\FinancialManager\Create.cshtml" />
+    <Content Include="Views\FinancialManager\Delete.cshtml" />
+    <Content Include="Views\FinancialManager\Details.cshtml" />
+    <Content Include="Views\FinancialManager\Edit.cshtml" />
+    <Content Include="Views\FinancialManager\Index.cshtml" />
+    <Content Include="Views\ServiceTaskLists\Details.cshtml" />
+    <Content Include="Views\ServiceTaskLists\Edit.cshtml" />
+    <Content Include="Views\ServiceTaskLists\Index.cshtml" />
+    <Content Include="Views\ServiceTaskLists1\Create.cshtml" />
+    <Content Include="Views\ServiceTaskLists1\Delete.cshtml" />
+    <Content Include="Views\ServiceTaskLists1\Details.cshtml" />
+    <Content Include="Views\ServiceTaskLists1\Edit.cshtml" />
+    <Content Include="Views\ServiceTaskLists1\Index.cshtml" />
+    <Content Include="Views\ProductionTaskList\Details.cshtml" />
+    <Content Include="Views\ProductionTaskList\Edit.cshtml" />
+    <Content Include="Views\ProductionTaskList\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -418,6 +455,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710141017021_hiringtracker.resx">
       <DependentUpon>201710141017021_hiringtracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710141049176_financialupdate.resx">
+      <DependentUpon>201710141049176_financialupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710141433155_servicetasklist.resx">
+      <DependentUpon>201710141433155_servicetasklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710141454446_servicetasklist2.resx">
+      <DependentUpon>201710141454446_servicetasklist2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710141511300_servicetasklist3.resx">
+      <DependentUpon>201710141511300_servicetasklist3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

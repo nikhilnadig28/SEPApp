@@ -10,17 +10,17 @@ using SEPApp.Models;
 
 namespace SEPApp.Controllers
 {
-    public class FinancialsController : Controller
+    public class FinancialManagerController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Financials
+        // GET: FinancialManager
         public ActionResult Index()
         {
             return View(db.Financials.ToList());
         }
 
-        // GET: Financials/Details/5
+        // GET: FinancialManager/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace SEPApp.Controllers
             return View(financial);
         }
 
-        // GET: Financials/Create
+        // GET: FinancialManager/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Financials/Create
+        // POST: FinancialManager/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -58,7 +58,7 @@ namespace SEPApp.Controllers
             return View(financial);
         }
 
-        // GET: Financials/Edit/5
+        // GET: FinancialManager/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace SEPApp.Controllers
             return View(financial);
         }
 
-        // POST: Financials/Edit/5
+        // POST: FinancialManager/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +89,7 @@ namespace SEPApp.Controllers
             return View(financial);
         }
 
-        // GET: Financials/Delete/5
+        // GET: FinancialManager/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +104,7 @@ namespace SEPApp.Controllers
             return View(financial);
         }
 
-        // POST: Financials/Delete/5
+        // POST: FinancialManager/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

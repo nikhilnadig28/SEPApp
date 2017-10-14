@@ -39,5 +39,7 @@ namespace SEPApp.Models
         public System.Data.Entity.DbSet<SEPApp.Models.Recruitment> Recruitments { get; set; }
 
         public System.Data.Entity.DbSet<SEPApp.Models.HiringTracker> HiringTrackers { get; set; }
+
+        public System.Data.Entity.DbSet<SEPApp.Models.ServiceTaskList> ServiceTaskLists { get; set; }
     }
 }

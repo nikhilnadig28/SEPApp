@@ -32,17 +32,30 @@
                     @if (User.IsInRole("FinancialManager"))
                     {
                         <li>@Html.ActionLink("Feedback", "Index", "Feedback")</li>
+                        <li>@Html.ActionLink("Budget Approval", "Index", "Financials")</li>
+
                     }
                     @if (User.IsInRole("SeniorCustomerCare"))
                     {
                         <li>@Html.ActionLink("Manage Event", "Index", "ManageEvent")</li>
                     }
-                    @if (User.IsInRole("ProductionManager") || User.IsInRole("ServiceManager"))
+                    @if (User.IsInRole("ProductionManager"))
                     {
                         <li>@Html.ActionLink("Events", "Index", "ManagerView")</li>
-                        <li>@Html.ActionLink("Task", "Index", "TaskList")</li>
+                        <li>@Html.ActionLink("Task", "Index", "TaskLists")</li>
                         <li>@Html.ActionLink("Request Resources", "Index", "Recruitments")</li>
+                        <li>@Html.ActionLink("Budget Request", "Index", "Financials")</li>
                     }
+
+
+                    @if (User.IsInRole("ServiceManager"))
+                    {
+                    <li>@Html.ActionLink("Events", "Index", "ManagerView")</li>
+                    <li>@Html.ActionLink("Task", "Index", "ServiceTaskLists1")</li>
+                    <li>@Html.ActionLink("Request Resources", "Index", "Recruitments")</li>
+                    <li>@Html.ActionLink("Budget Request", "Index", "Financials")</li>
+                    }
+
                     @if (User.IsInRole("HRManager"))
                     {
                         <li>@Html.ActionLink("Resources Needed", "Index", "HRManagerView")</li>
@@ -50,10 +63,21 @@
                     }
                     @if (User.IsInRole("HRTeam"))
                     {
-                        
-                      <li>@Html.ActionLink("Hiring Tracker", "Index", "TeamHiringTrackers")</li>
+
+                        <li>@Html.ActionLink("Hiring Tracker", "Index", "TeamHiringTrackers")</li>
                     }
 
+                    @if (User.IsInRole("ServiceTeamMember"))
+                    {
+
+                        <li>@Html.ActionLink("Task List", "Index", "ServiceTaskLists")</li>
+                    }
+
+                    @if (User.IsInRole("ProductionTeamMember"))
+                    {
+
+                        <li>@Html.ActionLink("Task List", "Index", "ProductionTaskLists")</li>
+                    }
 
 
                 </ul>
