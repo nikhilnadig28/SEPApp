@@ -36,29 +36,7 @@ namespace SEPApp.Controllers
             return View(hiringTracker);
         }
 
-        //// GET: TeamHiringTrackers/Create
-        //public ActionResult Create()
-        //{
-        //    return View();
-        //}
-
-        //// POST: TeamHiringTrackers/Create
-        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind(Include = "HireId,SkillSet,Status")] HiringTracker hiringTracker)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.HiringTrackers.Add(hiringTracker);
-        //        db.SaveChanges();
-        //        return RedirectToAction("Index");
-        //    }
-
-        //    return View(hiringTracker);
-        //}
-
+       
         // GET: TeamHiringTrackers/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -90,31 +68,6 @@ namespace SEPApp.Controllers
             return View(hiringTracker);
         }
 
-        // GET: TeamHiringTrackers/Delete/5
-        //public ActionResult Delete(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    HiringTracker hiringTracker = db.HiringTrackers.Find(id);
-        //    if (hiringTracker == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(hiringTracker);
-        //}
-
-        //// POST: TeamHiringTrackers/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult DeleteConfirmed(int id)
-        //{
-        //    HiringTracker hiringTracker = db.HiringTrackers.Find(id);
-        //    db.HiringTrackers.Remove(hiringTracker);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
 
         protected override void Dispose(bool disposing)
         {

@@ -89,32 +89,6 @@ namespace SEPApp.Controllers
             return View(serviceTaskList);
         }
 
-        // GET: ServiceTaskLists/Delete/5
-        //public ActionResult Delete(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    ServiceTaskList serviceTaskList = db.ServiceTaskLists.Find(id);
-        //    if (serviceTaskList == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(serviceTaskList);
-        //}
-
-        //// POST: ServiceTaskLists/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult DeleteConfirmed(int id)
-        //{
-        //    ServiceTaskList serviceTaskList = db.ServiceTaskLists.Find(id);
-        //    db.ServiceTaskLists.Remove(serviceTaskList);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)

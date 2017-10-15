@@ -36,29 +36,6 @@ namespace SEPApp.Controllers
             return View(@event);
         }
 
-        // GET: ApproveEvent/Create
-        //public ActionResult Create()
-        //{
-        //    return View();
-        //}
-
-        //// POST: ApproveEvent/Create
-        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind(Include = "EventId,EventName,EventType,ClientId,FromDate,ToDate,Preferences,Budget,SeniorCustomerApprove,AdministrativeManagerApprove,FinancialManagerComments")] Event @event)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.Events.Add(@event);
-        //        db.SaveChanges();
-        //        return RedirectToAction("Index");
-        //    }
-
-        //    return View(@event);
-        //}
-
         // GET: ApproveEvent/Edit/5
         public ActionResult Edit(int? id)
         {

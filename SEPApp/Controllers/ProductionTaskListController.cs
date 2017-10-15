@@ -35,28 +35,7 @@ namespace SEPApp.Controllers
             return View(taskList);
         }
 
-        // GET: ProductionTaskList/Create
-        //public ActionResult Create()
-        //{
-        //    return View();
-        //}
-
-        //// POST: ProductionTaskList/Create
-        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind(Include = "TaskId,TaskName,EmployeeId,TaskDetails,TaskFeedback")] TaskList taskList)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.TaskLists.Add(taskList);
-        //        db.SaveChanges();
-        //        return RedirectToAction("Index");
-        //    }
-
-        //    return View(taskList);
-        //}
+ 
 
         // GET: ProductionTaskList/Edit/5
         public ActionResult Edit(int? id)
@@ -88,32 +67,6 @@ namespace SEPApp.Controllers
             }
             return View(taskList);
         }
-
-        // GET: ProductionTaskList/Delete/5
-        //public ActionResult Delete(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    TaskList taskList = db.TaskLists.Find(id);
-        //    if (taskList == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(taskList);
-        //}
-
-        //// POST: ProductionTaskList/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult DeleteConfirmed(int id)
-        //{
-        //    TaskList taskList = db.TaskLists.Find(id);
-        //    db.TaskLists.Remove(taskList);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
 
         protected override void Dispose(bool disposing)
         {
