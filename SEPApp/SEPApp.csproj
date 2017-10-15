@@ -403,12 +403,8 @@
     <Content Include="Views\TeamHiringTrackers\Edit.cshtml" />
     <Content Include="Views\TeamHiringTrackers\Index.cshtml" />
     <Content Include="Views\Financials\Create.cshtml" />
-    <Content Include="Views\Financials\Delete.cshtml" />
-    <Content Include="Views\Financials\Details.cshtml" />
     <Content Include="Views\Financials\Edit.cshtml" />
     <Content Include="Views\Financials\Index.cshtml" />
-    <Content Include="Views\FinancialManager\Create.cshtml" />
-    <Content Include="Views\FinancialManager\Delete.cshtml" />
     <Content Include="Views\FinancialManager\Details.cshtml" />
     <Content Include="Views\FinancialManager\Edit.cshtml" />
     <Content Include="Views\FinancialManager\Index.cshtml" />

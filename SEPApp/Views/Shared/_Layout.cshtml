@@ -25,19 +25,24 @@
                     @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-                    @if (User.IsInRole("CustomerCare") || User.IsInRole("SeniorCustomerCare"))
+                    @if (User.IsInRole("CustomerCare"))
                     {
                         <li>@Html.ActionLink("Event", "Index", "Events")</li>
                     }
                     @if (User.IsInRole("FinancialManager"))
                     {
                         <li>@Html.ActionLink("Feedback", "Index", "Feedback")</li>
-                        <li>@Html.ActionLink("Budget Approval", "Index", "Financials")</li>
+                        <li>@Html.ActionLink("Budget Approval", "Index", "FinancialManager")</li>
 
                     }
                     @if (User.IsInRole("SeniorCustomerCare"))
                     {
                         <li>@Html.ActionLink("Manage Event", "Index", "ManageEvent")</li>
+                    }
+
+                    @if (User.IsInRole("AdminManager"))
+                    {
+                        <li>@Html.ActionLink("Approve Event", "Index", "ApproveEvent")</li>
                     }
                     @if (User.IsInRole("ProductionManager"))
                     {
@@ -76,7 +81,7 @@
                     @if (User.IsInRole("ProductionTeamMember"))
                     {
 
-                        <li>@Html.ActionLink("Task List", "Index", "ProductionTaskLists")</li>
+                        <li>@Html.ActionLink("Task List", "Index", "ProductionTaskList")</li>
                     }
 
 
